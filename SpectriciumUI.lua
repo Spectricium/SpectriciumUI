@@ -13,7 +13,7 @@ local customthemexd = {
         ElementColor = Color3.fromRGB(22, 29, 31)
         }
 
-local Window = Library.CreateLib("Spectricium UI v1.7.5", "Synapse")
+local Window = Library.CreateLib("Spectricium UI v1.7.5.2", "Synapse")
 
 --variables
 local Animate = game.Players.LocalPlayer.Character.Animate
@@ -525,3 +525,26 @@ local noclipplayer = game:GetService("Players").LocalPlayer
 notif("Script Loaded Spectricium UI")
 notif("To Turn On Off Press B")
 end)
+
+function Detector()
+if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
+	notif("R6 Detected")
+else
+	notif("R15 Detected")
+    end
+end
+
+Detector()
+
+notif("Made By Fenix Or Fenixium")
+
+function ClientKick()
+game.Players.LocalPlayer:Kick()
+end
+function Load()
+notif("Loaded")
+end
+
+
+
+
