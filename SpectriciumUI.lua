@@ -2,7 +2,9 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 wait(0.1)
 
 
+local version = "1.7.5.02"
 
+local Creators = " Fenixium"
 
 
 local customthemexd = {
@@ -13,7 +15,7 @@ local customthemexd = {
         ElementColor = Color3.fromRGB(22, 29, 31)
         }
 
-local Window = Library.CreateLib("Spectricium UI v1.7.5.2", "Synapse")
+local Window = Library.CreateLib("Spectricium UI ".. version..  Creators , "Synapse")
 
 --variables
 local Animate = game.Players.LocalPlayer.Character.Animate
@@ -355,13 +357,7 @@ end
     
     PlayerSection:NewButton("Reset", "Reset", function()
     game:GetService("Players").LocalPlayer.Character["Head"]:Destroy()
-    game:GetService("Players").LocalPlayer.Character["Torso"]:Destroy()
-    game:GetService("Players").LocalPlayer.Character["Left Arm"]:Destroy()
-    game:GetService("Players").LocalPlayer.Character["Right Arm"]:Destroy()
-    game:GetService("Players").LocalPlayer.Character["Left Leg"]:Destroy()
-    game:GetService("Players").LocalPlayer.Character["Right Leg"]:Destroy()
     game:GetService("Players").LocalPlayer.Character["Humanoid"]:Destroy()
-    game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"]:Destroy()
     notif("Script Loaded Spectricium UI")
     end)
     
@@ -428,6 +424,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/HoodProject/Espa-oles
     
 ScriptsSection:NewButton("BrookHaven Script", "Obiosly", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/testttbqwebg/adc0db730f5dfca0d8dbdb81f3b65391/raw/b0443888c4399af5a297cb1100a4749c65705711/qweqw"))()
 notif("Script Loaded Spectricium UI")
 end)
 
@@ -526,25 +523,22 @@ notif("Script Loaded Spectricium UI")
 notif("To Turn On Off Press B")
 end)
 
+
 function Detector()
+notif("Detecting...")
+wait(1.9)
+notif("Sending Result")
+wait(0.7)
 if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
 	notif("R6 Detected")
-else
+	local R6 = game.Players.LocalPlayer.Character:FindFirstChild("Torso")    
+    else
 	notif("R15 Detected")
-    end
+	local R15 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+	end
 end
 
+
+PlayerSection:NewButton("RDetector", "...", function()
 Detector()
-
-notif("Made By Fenix Or Fenixium")
-
-function ClientKick()
-game.Players.LocalPlayer:Kick()
-end
-function Load()
-notif("Loaded")
-end
-
-
-
-
+end)
